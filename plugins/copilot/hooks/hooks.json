@@ -1,0 +1,16 @@
+{
+  "description": "Copilot plugin session lifecycle hooks.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/copilot-companion.mjs\" setup --json > /dev/null 2>&1 || true",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "copilot-plugin-cc",
+  "version": "0.1.0",
+  "description": "Claude Code plugin for the local Copilot CLI — rescue tasks and review code.",
+  "type": "module",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  }
+}
