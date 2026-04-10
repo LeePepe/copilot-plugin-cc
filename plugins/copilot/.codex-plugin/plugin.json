@@ -1,0 +1,35 @@
+{
+  "name": "copilot",
+  "version": "0.2.0",
+  "description": "Delegate coding tasks and code reviews to the local Copilot CLI.",
+  "author": {
+    "name": "tianpli"
+  },
+  "license": "MIT",
+  "keywords": [
+    "copilot",
+    "coding",
+    "review",
+    "rescue"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Copilot Local",
+    "shortDescription": "Run local Copilot tasks from Codex",
+    "longDescription": "Use your local Copilot CLI for rescue tasks, code review prompts, and tracked background jobs directly from Codex.",
+    "developerName": "tianpli",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Run Copilot setup and verify the local binary",
+      "Delegate this implementation task to local Copilot",
+      "Run a Copilot review over current git diff"
+    ],
+    "brandColor": "#0EA5E9",
+    "screenshots": []
+  }
+}

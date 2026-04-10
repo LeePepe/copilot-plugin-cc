@@ -1,0 +1,20 @@
+{
+  "name": "copilot-local",
+  "interface": {
+    "displayName": "Copilot Local"
+  },
+  "plugins": [
+    {
+      "name": "copilot",
+      "source": {
+        "source": "local",
+        "path": "./plugins/copilot"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

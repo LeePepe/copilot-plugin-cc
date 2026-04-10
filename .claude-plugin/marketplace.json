@@ -5,13 +5,13 @@
   },
   "metadata": {
     "description": "Use the local Copilot CLI from Claude Code to rescue tasks and review code.",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "copilot",
       "description": "Delegate coding tasks and code reviews to the local Copilot CLI.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "author": {
         "name": "tianpli"
       },

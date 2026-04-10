@@ -37,8 +37,14 @@ const COPILOT_BIN =
     return "copilot";
   })();
 
-const SESSION_ID = process.env.CLAUDE_SESSION_ID || "default";
-const JOBS_DIR = path.join(os.homedir(), ".claude", "copilot-jobs", SESSION_ID);
+const RUNTIME =
+  process.env.CLAUDE_SESSION_ID || process.env.CLAUDE_PLUGIN_ROOT ? "claude" : "codex";
+const SESSION_ID =
+  process.env.CLAUDE_SESSION_ID || process.env.CODEX_THREAD_ID || process.env.CODEX_SESSION_ID || "default";
+const JOBS_ROOT =
+  process.env.COPILOT_JOBS_ROOT ||
+  path.join(os.homedir(), RUNTIME === "claude" ? ".claude" : ".codex");
+const JOBS_DIR = path.join(JOBS_ROOT, "copilot-jobs", SESSION_ID);
 
 // ---------------------------------------------------------------------------
 // Utility
@@ -133,7 +139,19 @@ function cmdSetup(args) {
   const avail = copilotAvailable();
 
   if (asJson) {
-    console.log(JSON.stringify({ ...avail, bin: COPILOT_BIN }, null, 2));
+    console.log(
+      JSON.stringify(
+        {
+          ...avail,
+          bin: COPILOT_BIN,
+          runtime: RUNTIME,
+          sessionId: SESSION_ID,
+          jobsDir: JOBS_DIR,
+        },
+        null,
+        2
+      )
+    );
     return;
   }
 
