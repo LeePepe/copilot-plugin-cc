@@ -8,7 +8,11 @@ This repository is a Claude Code plugin that routes work to a local Copilot CLI.
 - `plugins/copilot/agents/*.md`: thin forwarding agents (for example `copilot-rescue.md`).
 - `plugins/copilot/hooks/hooks.json`: session lifecycle hook wiring.
 - `plugins/copilot/.claude-plugin/plugin.json`: plugin metadata.
+- `plugins/copilot/.codex-plugin/plugin.json`: Codex plugin metadata.
+- `plugins/copilot/skills/copilot/SKILL.md`: Codex skill entry.
 - `.claude-plugin/marketplace.json`: local marketplace registration.
+- `.agents/plugins/marketplace.json`: Codex marketplace registration.
+- `scripts/install-codex-plugin.sh`: installs the plugin into a home Codex marketplace.
 
 Keep command and agent docs focused; put behavior changes in `copilot-companion.mjs`.
 
